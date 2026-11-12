@@ -1,0 +1,14 @@
+COMO PUBLICAR NO VERCEL
+
+Opção simples (4 sites separados, um link para cada):
+1. No Vercel, clique em Add New > Project.
+2. Envie a pasta "clinica" (ou use um repositório do GitHub com ela). Repita para imobiliaria, eventos e automotivo.
+3. Framework: Other. Não precisa de build.
+
+Opção 2 (um único link com tudo):
+1. Suba esta pasta inteira em um repositório do GitHub.
+2. Importe no Vercel. A página inicial lista os 4 exemplos.
+   Os links ficam assim: seusite.vercel.app/clinica/ , /imobiliaria/ , /eventos/ , /automotivo/
+
+Antes de mostrar a um cliente, troque o número 5531900000000 pelo seu WhatsApp (procure por esse número nos arquivos index.html).
+Todas as marcas e textos são fictícios. As imagens foram geradas com IA.

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torque Prime | Centro automotivo em Nova Lima</title>
+<meta name="description" content="Página de demonstração para centro automotivo. Marca e textos fictícios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080b11;--bg2:#0c111b;--card:#111826;--ac:#4a86e8;--ac2:#7aa8f0;--or:#ff6a2b;--tx:#eaf0ff;--mut:#9aa9c9;--ln:rgba(120,160,255,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:Barlow,system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;text-transform:uppercase;font-weight:800;line-height:1;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+header{position:fixed;inset:0 0 auto 0;z-index:20;background:rgba(8,11,17,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-size:1.8rem;font-weight:800;text-transform:uppercase}
+.logo b{color:var(--ac)}
+nav ul{display:flex;gap:30px;list-style:none;font-weight:600;font-size:.92rem;color:var(--mut)}
+nav a:hover{color:#fff}
+.btn{display:inline-block;background:var(--or);color:#fff;font-weight:700;padding:15px 30px;border-radius:6px;text-transform:uppercase;letter-spacing:.06em;font-size:.88rem;transition:.2s}
+.btn:hover{background:#ff8450}
+.btn.o{background:transparent;border:1px solid var(--ln);color:#fff}.btn.o:hover{background:var(--card)}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:72px;background:linear-gradient(90deg,#080b11f5 10%,#080b1199 60%,#080b1155),url(assets/hero.jpg) center/cover}
+.hero h1{font-size:clamp(3.2rem,8vw,6.6rem);max-width:820px;margin:16px 0 20px}
+.hero h1 span{color:var(--or)}
+.hero p{max-width:500px;color:#cdd5e4;font-size:1.1rem;margin-bottom:32px}
+.pill{display:inline-block;color:var(--ac2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.strip{background:#0c111b;color:#fff;border-top:3px solid var(--or);border-bottom:1px solid var(--ln)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-top:22px;padding-bottom:22px;text-align:center;font-weight:600}
+.strip b{color:var(--or);font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-size:1.35rem;display:block;text-transform:uppercase;white-space:nowrap}
+section{padding:110px 0}
+.head{max-width:640px;margin-bottom:50px}
+.head h2{font-size:clamp(2.4rem,5vw,3.8rem);margin:12px 0 14px}
+.head p{color:var(--mut)}
+.g6{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sv{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:32px 28px;transition:.25s;position:relative;overflow:hidden}
+.sv:before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--or);transition:.3s}
+.sv:hover{transform:translateY(-5px);border-color:var(--ac)}
+.sv:hover:before{width:100%}
+.sv .i{width:50px;height:50px;border-radius:10px;background:rgba(74,134,232,.16);color:var(--ac2);display:grid;place-items:center;font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:18px}
+.sv h3{font-size:1.6rem;margin-bottom:10px}
+.sv p{color:var(--mut);font-size:.96rem}
+.alt{background:var(--bg2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.two h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin:12px 0 18px}
+.two p{color:var(--mut);margin-bottom:14px}
+.ph{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ph img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:10px;border:1px solid var(--ln)}
+.ph img:first-child{grid-row:span 2;min-height:420px}
+.chk{list-style:none;margin:16px 0 28px;display:grid;gap:10px}
+.chk li:before{content:"✓";color:var(--or);font-weight:800;margin-right:10px}
+.cta-b{background:linear-gradient(110deg,#1a2438,#0d121c);border:1px solid var(--ln);border-radius:14px;padding:60px 40px;text-align:center}
+.cta-b h2{font-size:clamp(2.3rem,5vw,3.8rem);margin-bottom:14px}
+.cta-b p{color:#c3cde0;max-width:520px;margin:0 auto 28px}
+footer{padding:40px 0;border-top:1px solid var(--ln);color:var(--mut);font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.wa{position:fixed;right:22px;bottom:22px;z-index:30;background:#25d366;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 24px #0009}
+.wa svg{width:30px;height:30px;fill:#fff}
+@media(max-width:900px){nav ul{display:none}.g6{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.strip .wrap{grid-template-columns:1fr 1fr}section{padding:76px 0}}
+@media(max-width:560px){.g6{grid-template-columns:1fr}.ph{grid-template-columns:1fr}.ph img:first-child{grid-row:auto;min-height:260px}}
+.hero>.wrap{width:100%}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#">Torque<b>Prime</b></a>
+  <nav><ul><li><a href="#servicos">Serviços</a></li><li><a href="#oficina">A oficina</a></li><li><a href="#contato">Contato</a></li></ul></nav>
+  <a class="btn" href="https://wa.me/5531975014164?text=Ol%C3%A1!%20Quero%20agendar%20um%20servi%C3%A7o." target="_blank" rel="noopener">Agendar serviço</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <span class="pill">Centro automotivo · Nova Lima</span>
+  <h1>Seu carro em mãos <span>de confiança</span></h1>
+  <p>Diagnóstico com scanner, orçamento claro antes de começar e peças com garantia. Você acompanha tudo pelo WhatsApp.</p>
+  <div class="cta"><a class="btn" href="https://wa.me/5531975014164?text=Ol%C3%A1!%20Quero%20agendar%20um%20servi%C3%A7o." target="_blank" rel="noopener">Agendar agora</a><a class="btn o" href="#servicos">Ver serviços</a></div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+  <div><b>Orçamento claro</b>antes de começar</div><div><b>Garantia</b>em peças e serviço</div><div><b>Scanner</b>diagnóstico completo</div><div><b>Acompanhe</b>cada etapa no WhatsApp</div>
+</div></div>
+
+<section id="servicos"><div class="wrap">
+  <div class="head"><span class="pill">Serviços</span><h2>Tudo o que o seu carro precisa</h2><p>Manutenção preventiva e corretiva em um só lugar.</p></div>
+  <div class="g6">
+    <div class="sv"><div class="i">01</div><h3>Revisão completa</h3><p>Checklist em dezenas de itens para evitar surpresas na estrada.</p></div>
+    <div class="sv"><div class="i">02</div><h3>Freios e suspensão</h3><p>Pastilhas, discos e amortecedores com ajuste de precisão.</p></div>
+    <div class="sv"><div class="i">03</div><h3>Diagnóstico com scanner</h3><p>Leitura eletrônica para achar a causa real da luz de injeção.</p></div>
+    <div class="sv"><div class="i">04</div><h3>Troca de óleo e filtros</h3><p>Produtos adequados à especificação do seu motor.</p></div>
+    <div class="sv"><div class="i">05</div><h3>Alinhamento e balanceamento</h3><p>Mais estabilidade, economia e vida útil dos pneus.</p></div>
+    <div class="sv"><div class="i">06</div><h3>Ar-condicionado</h3><p>Higienização e carga de gás para o conforto o ano todo.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="oficina"><div class="wrap two">
+  <div>
+    <span class="pill">A oficina</span>
+    <h2>Estrutura moderna, equipe que explica tudo</h2>
+    <p>Aqui você vê o problema, entende a solução e aprova o orçamento antes de qualquer serviço. Sem letras miúdas.</p>
+    <ul class="chk"><li>Elevadores e equipamentos de alinhamento</li><li>Fotos e vídeos do serviço enviados a você</li><li>Peças com nota fiscal e garantia</li><li>Prazo combinado e cumprido</li></ul>
+    <a class="btn" href="https://wa.me/5531975014164" target="_blank" rel="noopener">Pedir orçamento</a>
+  </div>
+  <div class="ph"><img src="assets/freio.jpg" alt="Disco de freio em manutenção" loading="lazy"><img src="assets/motor.jpg" alt="Diagnóstico eletrônico do motor" loading="lazy"><img src="assets/hero.jpg" alt="Interior da oficina" loading="lazy"></div>
+</div></section>
+
+<section id="contato"><div class="wrap"><div class="cta-b">
+  <h2>Pronto para rodar sem preocupação?</h2>
+  <p>Mande o modelo do carro e o que está acontecendo. Retornamos com orientação e horário disponível.</p>
+  <a class="btn" href="https://wa.me/5531975014164?text=Ol%C3%A1!%20Quero%20agendar%20um%20servi%C3%A7o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><span>© Torque Prime · Nova Lima, MG</span><span>Página de demonstração. Marca e textos fictícios.</span></div></footer>
+<a class="wa" href="https://wa.me/5531975014164" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.8 1.5 5.600 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4c-1-1.600-1.500-3.300-1.500-5.200C5.600 9.800 10.300 5.200 16 5.200s10.400 4.600 10.400 10.300S21.700 25.800 16 25.800zm5.700-7.700c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6.100-.1.300-.4.500-.5.200-.2.200-.3.300-.5.100-.2.100-.4 0-.5-.1-.2-.7-1.700-1-2.300-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700.8.300 1.400.5 1.800.6.800.2 1.500.2 2 .1.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.4z"/></svg></a>
+</body>
+</html>
